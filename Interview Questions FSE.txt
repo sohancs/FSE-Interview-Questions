@@ -1,0 +1,80 @@
+Interview Questions :
+Core Java:
+1. What are the features in Java 8 you used in your project?
+2. Internal working of HashMap. Implement custom HashMap.
+3. Diff. between Interface & Abstract Class in Java 8? (Can Abstract class have constructor?)
+4. Implement signalton design pattern? How to break it?
+5. How to make class immutable? Implement your own immutable class.
+6. Use of static class?
+7. Why string is immutable? How many object will created when string define by new keyword or string literals?
+8. What are the design pattern you have used in your project?
+9. Diff between ArrayList & LinkedList? when to use what? Implement Custom LinkedList.
+10. What are thread safe collection in java? How to make arrayList or map to thread safe?
+11. Diff between HashMap vs ConsurrentHashMap?
+12. Why not to use Collections.synchronizedMap() to make collection thread safe?
+13. What is exector service? what are its type?
+14. What are functional interfaces(FI)? FI in java 8.
+15. Diff between stream vs parallelStream?
+16. SOLID priciples?
+17. What is memory leakage in java? How to avoid it?
+18. How garbage collector work? How to call it manually?
+19. Contract between eqauls() & hashCode()?
+20. When ConcuurentModificationException arises?
+21. Implemenent Factory, Observer Design pattern.
+
+
+Spring Boot:
+1. What are the spring boot annotation you have used so far?
+2. Diff bet spring boot vs spring mvc.
+3. How does spring boot automatic configuration?
+4. How you have implemented Spring security in your project?
+5. How to connect to database using spring boot?
+6. How to exclude few class from auto-configuration?
+7. What is @SpringBootApplication?
+8. How to change inbuild tomcat server to jetty server?
+9. Can we interchange @RestController with @Sevice or @Respository?
+10. What are spring bean scopes? What is spring bean lifecycle?
+11. Diff bet @Component vs @Bean.
+12. How you have handle exception in your project? How to implment centralized exceptional handling?
+13. What is Dependency Injection & Inversion of Control?
+14. What is transactions? what is transaction propagation?
+15. What is cyclic dependecy? How to avoid it?(using setter DI or lazy-initilization of beans.)
+16. What are types of Autowired? What are type of Dependency Injection? 
+17. How to implement One-To-Many, Many-To-Many mapping using Spring Data JPA.
+18. Print random number at every 5 ms for 1 min using Thread.(CityCorp)
+19. Given list of strings. Find the top k words.(Paytm)
+20. Given List of Employee(name, age) entity. Find Map with age as key and List of Employee as value. (using groupingBy stream operator)
+ans : 	Map<Integer, List<Employee>> map = empList.stream().collect(Collectors.groupingBy(EmployeeGroupingByOperation::getAge));
+		map.forEach((key, value) -> {
+			System.out.println(key);
+			value.forEach(System.out::print);
+			System.out.println(" ");
+		});
+21. Given array of 0's, 1's element. Shift all 1's to begining & 0's to end of array(without sorting of array).
+
+Angular:
+1. What are lifecycle hooks in angular?
+2. How to do communication between two components?
+3. Diff bet Template driven form vs Reactive forms?
+4. What are pipes? How to implement our own pipe?
+5. What are directives?
+6. Diff bet Observables vs Promises?
+7. What is lazy loading?  Lazy Loading modules(syntax in Angular 8).
+8. Diff bet angular 8 vs previous versions?
+9. how to handle backend service failure in angular?
+10. How to restrict access(authorization) to user? (CanActivate service & auth guard)
+11. What if one service call dependent on other, How will you handle such case? 
+(write logic of dependent service inside subscribe() of outerservice. But better approach is using Promises since they execute sequencially.)
+
+Oracle Database:
+1. What are types of joins & explain it?
+2. What are views? Diff bet view & material view?
+3. Find dept_name having more than 10 employees.
+	EMPLOYEE table, fields are emp_id, dept_id, emp_sal. 
+	DEPARTMENT table fields: DEPT_ID, DEPT_NAME    
+
+ans : select d.DEPT_NAME, count(*) from EMPLOYEE e join DEPARTMENT d on e.dept_id = d.DEPT_ID group by d.DEPT_NAME having count(*) > 10
+4. Diff bet unique key vs primary key.
+
+
+
